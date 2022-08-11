@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PracticeForm.Practice_Form" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-11T21:02:06" hostname="DESKTOP-QROR17O" time="20.316">
+  <properties/>
+  <testcase name="wholeFormAutomation" classname="PracticeForm.Practice_Form" time="20.316"/>
+  <system-out><![CDATA[Female radio button is deselected and Male radio button is selected
+true
+[[[[[ChromeDriver: chrome on WINDOWS (3acc0439b09c52e07ce1a714fdfd96a4)] -> tag name: tbody]] -> tag name: tr], [[[[ChromeDriver: chrome on WINDOWS (3acc0439b09c52e07ce1a714fdfd96a4)] -> tag name: tbody]] -> tag name: tr], [[[[ChromeDriver: chrome on WINDOWS (3acc0439b09c52e07ce1a714fdfd96a4)] -> tag name: tbody]] -> tag name: tr], [[[[ChromeDriver: chrome on WINDOWS (3acc0439b09c52e07ce1a714fdfd96a4)] -> tag name: tbody]] -> tag name: tr], [[[[ChromeDriver: chrome on WINDOWS (3acc0439b09c52e07ce1a714fdfd96a4)] -> tag name: tbody]] -> tag name: tr], [[[[ChromeDriver: chrome on WINDOWS (3acc0439b09c52e07ce1a714fdfd96a4)] -> tag name: tbody]] -> tag name: tr], [[[[ChromeDriver: chrome on WINDOWS (3acc0439b09c52e07ce1a714fdfd96a4)] -> tag name: tbody]] -> tag name: tr], [[[[ChromeDriver: chrome on WINDOWS (3acc0439b09c52e07ce1a714fdfd96a4)] -> tag name: tbody]] -> tag name: tr], [[[[ChromeDriver: chrome on WINDOWS (3acc0439b09c52e07ce1a714fdfd96a4)] -> tag name: tbody]] -> tag name: tr], [[[[ChromeDriver: chrome on WINDOWS (3acc0439b09c52e07ce1a714fdfd96a4)] -> tag name: tbody]] -> tag name: tr]]
+Saved!
+[{"Student Name":"Nibraj Khan","Address":"383,Rosa Vista,Modhubagh,Moghbazar","State and City":"Haryana Karnal","Picture":"myImg.jpeg","Student Email":"nibrajkhan123@gmail.com","Date of Birth":"18 March,1999","Gender":"Male","Mobile":"1780006900","Subjects":"Chemistry, Economics","Hobbies":"Sports, Reading"},{"Student Name":"Nibraj Khan","Address":"383,Rosa Vista,Modhubagh,Moghbazar","State and City":"Haryana Karnal","Picture":"myImg.jpeg","Student Email":"nibrajkhan123@gmail.com","Date of Birth":"18 March,1999","Gender":"Male","Mobile":"1780006900","Subjects":"Chemistry, Economics","Hobbies":"Sports, Reading"}]]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 103.0.5060.134 (8ec6fce403b3feb0869b0732eda8bd95011d333c-refs/branch-heads/5060@{#1262}) on port 64938
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1660251727.031][WARNING]: This version of ChromeDriver has not been tested with Chrome version 104.
+Aug 12, 2022 3:02:07 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+Aug 12, 2022 3:02:07 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 104, so returning the closest version found: 103
+Aug 12, 2022 3:02:07 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found CDP implementation for version 104 of 103
+]]></system-err>
+</testsuite>

@@ -1,3 +1,5 @@
+package JUnitTests;
+
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Assert;
@@ -31,7 +33,7 @@ public class JunitAutomation {
     public void getTitle(){
         driver.get("https://demoqa.com/");
         String title= driver.getTitle();
-        Assert.assertEquals("Tools",title);
+        Assert.assertEquals("ToolsQA",title);
         //Assert.assertTrue(title.contains("ToolsQA"));
     }
     @Test
@@ -47,9 +49,10 @@ public class JunitAutomation {
 //        txtEmail.sendKeys("salman@test.com");
         WebElement txtEmail=driver.findElement(By.cssSelector("[type='email']"));
         txtEmail.sendKeys("salman@test.com");
-
+        Actions action =new Actions(driver);
         List<WebElement> button=driver.findElements(By.tagName("button"));
-        button.get(1).click();
+        action.moveToElement(button.get(1)).click();
+//        button.get(1).click();
 
         //driver.findElements(By.tagName("button")).get(0).click();
     }
@@ -159,7 +162,7 @@ public class JunitAutomation {
     @Test
     public void uploadFile(){
         driver.get("https://demoqa.com/upload-download");
-        driver.findElement(By.id("uploadFile")).sendKeys("C:\\Users\\18201057\\Pictures\\Saved Pictures\\kamlesh.jpeg");
+        driver.findElement(By.id("uploadFile")).sendKeys("C:\\Users\\NibrazKhan\\Pictures\\Saved Pictures\\random_Cv.jpg");
     }
     @Test
     public void downloadfile(){
@@ -216,7 +219,7 @@ public class JunitAutomation {
         }
 
     }
-    //handling Iframe
+//    handling Iframe
     @Test
     public void handleIframe(){
         driver.get("https://demoqa.com/frames");
@@ -228,12 +231,12 @@ public class JunitAutomation {
 
     }
 
-
+//
 
     @After
     public void close() {
 //        driver.close();
-//        driver.quit();
+        driver.quit();
     }
 
 }

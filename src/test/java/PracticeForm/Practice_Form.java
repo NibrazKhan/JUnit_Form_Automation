@@ -1,3 +1,4 @@
+package PracticeForm;
 import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -14,12 +15,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.security.Key;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
@@ -103,24 +107,26 @@ public class Practice_Form {
         WebElement city= driver.findElement(By.id("react-select-4-input"));
         //selecting the state as Haryana by writing Ha and enter
         //if the dropdown is enabled
-        if(state.isDisplayed()) {
-            state.sendKeys("Ha");
-              Thread.sleep(1000);
-            state.sendKeys(Keys.ENTER);
-        }
+//        if(state.isDisplayed()) {
+//            state.sendKeys("Ha");
+//              Thread.sleep(1000);
+//            state.sendKeys(Keys.ENTER);
+//        }
+        state.sendKeys("Ha");
+        Thread.sleep(1000);
+        state.sendKeys(Keys.ENTER);
         Thread.sleep(1000);
         //if city is enabled
-        if(city.isEnabled()) {
 //            city.sendKeys("Pan");
 //            Thread.sleep(1000);
 //            state.sendKeys(Keys.ENTER);
             action.moveToElement(city).click().keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
-        }
+
 //        -------------- Clicking Submit Button --------------
-        WebElement submit= driver.findElement(By.id("submit"));
+        WebElement submitButton= driver.findElement(By.cssSelector("[type=submit]"));
         Thread.sleep(1000);
         //clicking the submit button
-        action.moveToElement(submit).click().perform();
+        action.moveToElement(submitButton).sendKeys(Keys.ENTER).perform();
         //checking whether submit button is visible or not
 //        Assert.assertTrue(submit.isDisplayed());
 //    -----------------keeping user info into json Array by extracting the info from the table-------------
@@ -130,15 +136,17 @@ public class Practice_Form {
 ////        Assert.assertEquals("Thanks for submitting the form",tableHeaderMsg.getText());
         WebElement table= driver.findElement(By.tagName("tbody"));
         System.out.println(driver.findElement(By.tagName("tbody")).isDisplayed());
-        List<WebElement> allRows=table.findElements(By.className("tr"));
+        List<WebElement> allRows=table.findElements(By.tagName("tr"));
+        System.out.println(allRows);
         for (WebElement row:
                 allRows) {
-            List<WebElement>cells=row.findElements(By.className("td"));
+            List<WebElement>cells=row.findElements(By.tagName("td"));
+//            System.out.println(cells.get(0).getText());
             hashMap.put(cells.get(0).getText(),cells.get(1).getText());
             }
-//        String[]array=hashMap.values().toArray(new String[0]);
+        //printing values of form datas
 //        for (String value:
-//             array) {
+//                hashMap.values()) {
 //            System.out.println(value);
 //
 //        }
@@ -165,6 +173,7 @@ public class Practice_Form {
         System.out.print(jsonArray);
 
     }
+
 
 
 
